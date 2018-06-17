@@ -12,7 +12,10 @@ class App extends Component {
 
   addTask = () => {
     let list = this.state.toDoList;
-    list[this.state.lastTaskId] = this.state.lastTaskId;
+    list[this.state.lastTaskId] = {
+      id: this.state.lastTaskId,
+      details: 'pizza'
+    }
 
     let nextTaskId = this.state.lastTaskId + 1;
 
