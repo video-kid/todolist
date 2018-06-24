@@ -7,23 +7,25 @@ import './App.css';
 class App extends Component {
   state = {
     toDoList: [],
-    lastTaskId: 0
+    lastTaskId: 0,
+    details: ''
   }
 
   addTask = () => {
     let list = this.state.toDoList;
     list[this.state.lastTaskId] = {
       id: this.state.lastTaskId,
-      details: 'pizza'
+      details: this.state.details
     }
 
     let nextTaskId = this.state.lastTaskId + 1;
 
     this.setState({
       toDoList: list,
-      lastTaskId: nextTaskId
+      lastTaskId: nextTaskId,
+      details: ''
     })
-
+    
   }
 
   clearAll = () => {
@@ -48,12 +50,24 @@ class App extends Component {
     })
   }
 
+  handleInputChange = (event) => {
+    let taskDetail = event.target.value;
+
+    this.setState({
+      details: taskDetail
+    })
+ 
+  }
+
   render() {
     return (
       <div className="App">
         <button onClick={this.addTask}>Add</button>
         <button onClick={this.deleteLast}>Remove</button>
         <button onClick={this.clearAll}>Clear</button>
+        <form>
+          <input type="text" name="taskDetails" value={this.state.details} onChange={this.handleInputChange}></input>
+        </form>
           <List items={this.state.toDoList}/>
       </div>
     );

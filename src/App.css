@@ -24,3 +24,7 @@ button {
     box-shadow: 0 2px 2px 0px #212121;
     cursor: pointer;
 }
+
+form {
+    padding: 20px;
+}
