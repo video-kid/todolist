@@ -35,19 +35,19 @@ class App extends Component {
     })
   }
 
-  deleteLast = () => {
+  deleteCurrent = (taskId) => {
     if (this.state.lastTaskId === 0) {
       return;
     }
 
     let list = this.state.toDoList;
-    let previousTaskId = this.state.lastTaskId - 1;
-    list.splice(previousTaskId, 1);
+    let markedTaskId = taskId;
+    list.splice(markedTaskId, 1);
 
     this.setState({
-      toDoList: list,
-      lastTaskId: previousTaskId
+      toDoList: list
     })
+
   }
 
   handleInputChange = (event) => {
@@ -63,12 +63,11 @@ class App extends Component {
     return (
       <div className="App">
         <button onClick={this.addTask}>Add</button>
-        <button onClick={this.deleteLast}>Remove</button>
         <button onClick={this.clearAll}>Clear</button>
         <form>
           <input type="text" name="taskDetails" value={this.state.details} onChange={this.handleInputChange}></input>
         </form>
-          <List items={this.state.toDoList}/>
+          <List items={this.state.toDoList} delete={this.deleteCurrent}/>
       </div>
     );
   }
