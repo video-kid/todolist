@@ -26,6 +26,10 @@ ul, li {
 
 }
 
+.taskNumber i {
+    font-size: 20px;
+}
+
 
 .taskDetails {
 

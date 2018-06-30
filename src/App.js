@@ -8,14 +8,18 @@ class App extends Component {
   state = {
     toDoList: [],
     lastTaskId: 0,
-    details: ''
+    details: '',
+    taskDate: ''
   }
 
+
   addTask = () => {
+    
     let list = this.state.toDoList;
     list[this.state.lastTaskId] = {
       id: this.state.lastTaskId,
-      details: this.state.details
+      details: this.state.details,
+      taskDate: Date()
     }
 
     let nextTaskId = this.state.lastTaskId + 1;
@@ -23,10 +27,12 @@ class App extends Component {
     this.setState({
       toDoList: list,
       lastTaskId: nextTaskId,
-      details: ''
+      details: '',
+      taskDate: ''
     })
     
   }
+
 
   clearAll = () => {
     this.setState({
@@ -56,6 +62,7 @@ class App extends Component {
     this.setState({
       details: taskDetail
     })
+
  
   }
 
@@ -68,6 +75,10 @@ class App extends Component {
           <input type="text" name="taskDetails" value={this.state.details} onChange={this.handleInputChange}></input>
         </form>
           <List items={this.state.toDoList} delete={this.deleteCurrent}/>
+
+                  <script src="https://use.fontawesome.com/a5044cee05.js"></script>
+          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossOrigin="anonymous"/>
+
       </div>
     );
   }
