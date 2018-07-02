@@ -1,29 +1,23 @@
-ul, li {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
-}
-
 .itemList {
     margin: 20px;
     list-style-type: none;
+    margin: auto;
+}
+
+div {
+    border: 1px dashed black;
+}
+
+.containerOfAll * {
+    float: left;
 }
 
 .itemList li {
-    background-color: #80cbc4;
-    width: 50%;
-    margin: auto;
+    background-color: #b2ebf2;
+    width: 70%;
     font-size: 30px;
     color: #004d40;
-    border: 1px solid #2BBBAD;
-}
-
-.taskNumber {
-
+    border: 1px solid #4dd0e1;
 }
 
 .taskNumber i {
@@ -33,4 +27,9 @@ ul, li {
 
 .taskDetails {
 
+}
+
+.fas.fa-check-square {
+    font-size: 30px;
+    color: white;
 }

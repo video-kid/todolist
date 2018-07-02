@@ -4,13 +4,13 @@
 
 .App {
     text-align: center;
-    background-color: #2BBBAD;
+    background-color: #80deea;
     width: 100%;
     min-height: 100vw;
 }
 
 button {
-    background-color: #00695c; 
+    background-color: #00838f; 
     border: none;
     color: white;
     height: 70px;
