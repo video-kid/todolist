@@ -4,27 +4,96 @@
 
 .App {
     text-align: center;
-    background-color: #80deea;
-    width: 100%;
-    min-height: 100vw;
+    background-color: #b2ebf2;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+header {
+    text-align: left;
+    min-width: 100vw;
+    height: 60px;
+    padding: 10px;
+    background-color: #0097a7;
+    box-shadow: 0 1px 6px 0px #212121;
+}
+
+header h1 {
+    display: inline-block;
+    padding-left: 15px;
+    font-family: 'Galada';
+    font-size: 40px;
+    color: white;
+}
+
+header i {
+    color: white;
+    font-size: 40px;
+}
+
+section {
+    min-width: 100%;
+    height: 30vh;
+    position: relative;
+}
+
+section .addingContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+section .addingContainer * {
+    float: left;
+}
+
+input[type=text] {
+    min-width: 30vw;
+    min-height: 60px;
+    border-radius: 4px 0px 0px 4px;
+    border: 2px solid #00acc1;
+    border-right: none;
+    font-size: 150%;
+    padding: 4px;
+    background-color: #ffffff;
 }
 
 button {
-    background-color: #00838f; 
     border: none;
     color: white;
-    height: 70px;
-    min-width: 120px;
-    margin: 4px;
-    margin-top: 20px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    box-shadow: 0 2px 2px 0px #212121;
+    font-size: 150%;
     cursor: pointer;
 }
 
-form {
-    padding: 20px;
+.addButton {
+    background-color: #00838f; 
+    min-height: 60px;
+    min-width: 120px;
+    border-radius: 0px 4px 4px 0px;
+    border: 2px solid #00acc1;
+    border-left: none;
+
+}
+.clearButton {
+    background-color: #ffa000; 
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    min-width: 75px;
+    min-height: 75px;
+    border-radius: 40px;
+    box-shadow: 0 2px 4px 0px #212121;
+}
+
+.clearButton i {
+    font-size: 40px;
+}
+
+main {
+    /*border: 1px dotted red;*/
+    width: 100vw;
+    position: relative;
 }

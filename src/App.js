@@ -69,13 +69,25 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <button onClick={this.addTask}>Add</button>
-        <button onClick={this.clearAll}>Clear</button>
-        <form>
-          <input type="text" name="taskDetails" value={this.state.details} onChange={this.handleInputChange}></input>
-        </form>
+      <header>
+      <i class="fas fa-list-alt"></i>
+        <h1>To Do List</h1>
+      </header>
+      <section>
+        <div className="addingContainer">
+          <form>
+            <input type="text" name="taskDetails" value={this.state.details} onChange={this.handleInputChange}></input>
+          </form>
+          <button className="addButton" onClick={this.addTask}>Add</button>
+          <div style={{clear: 'both'}}></div>
+        </div>
+        </section>
+        <main>
+        <div className='listContainer'>
           <List items={this.state.toDoList} delete={this.deleteCurrent}/>
-
+        </div>
+        </main>
+          <button className="clearButton" onClick={this.clearAll}><i class="fas fa-sync-alt"></i></button>
       </div>
     );
   }

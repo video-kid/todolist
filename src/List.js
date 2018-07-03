@@ -5,6 +5,7 @@ const List = props => (
   <ul className="itemList">
     {
       props.items.map((item, index) => <li key={index}>
+      
       <div className="containerOfAll">
       <div className='taskNumber'>
         <div className='headerContainer'>
@@ -22,6 +23,7 @@ const List = props => (
       <div className='taskDetails'> {item.details}</div>
       </div>
       <div style={{clear: 'both'}}></div>
+       
       </li>)
       
     }

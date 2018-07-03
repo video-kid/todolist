@@ -1,11 +1,7 @@
-.itemList {
-    margin: 20px;
-    list-style-type: none;
-    margin: auto;
-}
 
-div {
-    border: 1px dashed black;
+.itemList {
+    list-style-type: none;
+    position: relative;
 }
 
 .containerOfAll * {
@@ -13,23 +9,49 @@ div {
 }
 
 .itemList li {
-    background-color: #b2ebf2;
-    width: 70%;
     font-size: 30px;
     color: #004d40;
-    border: 1px solid #4dd0e1;
+    width: 40vw;
+    padding: 5px;
+    margin: auto;
+    position: relative;
+}
+
+.taskNumber {
+    background-color: #0097a7;
+    width: 100%;
 }
 
 .taskNumber i {
     font-size: 20px;
 }
 
+.timeContainer {
+    margin-left: 20px;
+    padding-right: 20px;
+}
+
+.iconContainer {
+    position: absolute;
+    right: 20px;
+}
 
 .taskDetails {
+    background-color: #e0f7fa;
+    width: 100%;
+    overflow: auto;
+    visibility: hidden;
+}
 
+.taskDetails .visible {
+    background-color: #e0f7fa;
+    height: 100px;
+    width: 100%;
+    overflow: auto;
 }
 
 .fas.fa-check-square {
     font-size: 30px;
     color: white;
 }
+
