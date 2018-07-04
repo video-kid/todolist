@@ -9,7 +9,7 @@ class App extends Component {
     toDoList: [],
     lastTaskId: 0,
     details: '',
-    taskDate: ''
+    taskDate: '',
   }
 
 
@@ -19,7 +19,8 @@ class App extends Component {
     list[this.state.lastTaskId] = {
       id: this.state.lastTaskId,
       details: this.state.details,
-      taskDate: new Date()
+      taskDate: new Date(),
+      detailsVisibility: 'hidden'
     }
 
     let nextTaskId = this.state.lastTaskId + 1;
@@ -45,7 +46,6 @@ class App extends Component {
     if (this.state.lastTaskId === 0) {
       return;
     }
-
     let list = this.state.toDoList;
     let markedTaskId = taskId;
     list.splice(markedTaskId, 1);
@@ -62,15 +62,37 @@ class App extends Component {
     this.setState({
       details: taskDetail
     })
-
- 
   }
+
+  
+    visibilityToggler = (taskId) => {
+      
+    let list = this.state.toDoList;
+    let visibilityState =  list[taskId].detailsVisibility;
+
+    if (visibilityState === 'hidden') {
+      visibilityState = 'showed';
+    } else {
+      visibilityState = 'hidden';
+    }
+
+    list[taskId].detailsVisibility = visibilityState;
+
+    this.setState({
+      toDoList: list
+    })
+
+    console.log(visibilityState);
+    console.log(taskId)
+    }
+
+
 
   render() {
     return (
       <div className="App">
       <header>
-      <i class="fas fa-list-alt"></i>
+      <i className="fas fa-list-alt"></i>
         <h1>To Do List</h1>
       </header>
       <section>
@@ -84,10 +106,10 @@ class App extends Component {
         </section>
         <main>
         <div className='listContainer'>
-          <List items={this.state.toDoList} delete={this.deleteCurrent}/>
+          <List items={this.state.toDoList} delete={this.deleteCurrent} toggler={this.visibilityToggler}/>
         </div>
         </main>
-          <button className="clearButton" onClick={this.clearAll}><i class="fas fa-sync-alt"></i></button>
+          <button className="clearButton" onClick={this.clearAll}><i className="fas fa-sync-alt"></i></button>
       </div>
     );
   }

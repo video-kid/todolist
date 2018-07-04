@@ -2,6 +2,7 @@ import React from 'react';
 import './List.css';
 
 const List = props => (
+
   <ul className="itemList">
     {
       props.items.map((item, index) => <li key={index}>
@@ -9,6 +10,9 @@ const List = props => (
       <div className="containerOfAll">
       <div className='taskNumber'>
         <div className='headerContainer'>
+          <div className='showDetails'>
+          <i className="fas fa-caret-down"onClick={() => props.toggler(index)}></i>
+          </div>
           <div className='timeContainer'>
           {new Intl.DateTimeFormat('pl-PL').format(item.taskDate)}
           </div>
@@ -20,7 +24,7 @@ const List = props => (
             <i className="fas fa-check-square"  onClick={() => props.delete(index)}></i>
           </div>
       </div>
-      <div className='taskDetails'> {item.details}</div>
+      <div className={'taskDetails' + ' ' + item.detailsVisibility} > {item.details}</div>
       </div>
       <div style={{clear: 'both'}}></div>
        

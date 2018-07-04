@@ -27,23 +27,24 @@
 }
 
 .timeContainer {
-    margin-left: 20px;
+    margin-left: 50px;
     padding-right: 20px;
 }
 
 .iconContainer {
     position: absolute;
     right: 20px;
+    cursor: pointer;
 }
 
-.taskDetails {
+.taskDetails.hidden {
     background-color: #e0f7fa;
     width: 100%;
     overflow: auto;
-    visibility: hidden;
+    display: none;
 }
 
-.taskDetails .visible {
+.taskDetails.showed {
     background-color: #e0f7fa;
     height: 100px;
     width: 100%;
@@ -55,3 +56,13 @@
     color: white;
 }
 
+.showDetails {
+    position: absolute;
+    left: 20px;
+    cursor: pointer;
+}
+
+.fas.fa-caret-down {
+    font-size: 30px;
+    color: white;
+}
