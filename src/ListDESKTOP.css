@@ -1,7 +1,7 @@
 
 .itemList {
     list-style-type: none;
-    min-width: 100vw;
+    position: relative;
 }
 
 .containerOfAll * {
@@ -11,7 +11,7 @@
 .itemList li {
     font-size: 30px;
     color: #004d40;
-    width: 90vw;
+    width: 40vw;
     padding: 5px;
     margin: auto;
     position: relative;
@@ -27,21 +27,14 @@
 }
 
 .timeContainer {
-    width: 100%;
-    margin: auto;
-}
-
-.titleContainer {
-    width: 100%;
-    margin: auto;
+    margin-left: 50px;
+    padding-right: 20px;
 }
 
 .iconContainer {
     position: absolute;
     right: 20px;
     cursor: pointer;
-    top: 50%;
-    transform: translateY(-50%)
 }
 
 .taskDetails.hidden {
@@ -67,16 +60,9 @@
     position: absolute;
     left: 20px;
     cursor: pointer;
-    top: 50%;
-    transform: translateY(-50%)
 }
 
 .fas.fa-caret-down {
     font-size: 30px;
     color: white;
-}
-
-.headerContainer {
-    position: relative;
-    width: 100%;
 }

@@ -19,9 +19,10 @@ const List = props => (
           <div className="titleContainer">
             Task number {item.id}
           </div>
-        </div>
           <div className='iconContainer'>
             <i className="fas fa-check-square"  onClick={() => props.delete(index)}></i>
+        </div>
+          
           </div>
       </div>
       <div className={'taskDetails' + ' ' + item.detailsVisibility} > {item.details}</div>
