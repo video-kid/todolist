@@ -80,3 +80,12 @@
     position: relative;
     width: 100%;
 }
+
+@media screen 
+and (min-width: 900px)
+and (orientation: landscape) {
+
+.itemList li {
+    width: 70vw;
+}
+}
