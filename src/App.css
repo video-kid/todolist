@@ -101,3 +101,30 @@ button {
     font-size: 40px;
 }
 
+@media screen 
+    and (min-width: 590px)
+    and (orientation: landscape) {
+        section .addingContainer {
+            height: 25vh;
+            padding-left: 4vw;
+            padding-right: 4vw;
+        }
+
+        .App {
+            padding-bottom: 23vh;
+        }
+    }
+
+    @media screen 
+    and (orientation: landscape)
+    and (max-height: 450px) {
+        section .addingContainer {
+            height: 30%;
+        }
+    }
+
+    @media screen 
+    and (min-width: 900px)
+    and (orientation: landscape) {
+
+    }
