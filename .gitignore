@@ -6,8 +6,8 @@
 # testing
 /coverage
 
-# production
-/build
+# production - gitraw used for deploy
+# /build
 
 # misc
 .DS_Store
