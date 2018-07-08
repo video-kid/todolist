@@ -1,77 +1,163 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .App {
+  text-align: center;
+  background-color: #b2ebf2;
+  min-width: 100vw;
+  min-height: 100vh;
+  padding-bottom: 120px;
+}
+
+header {
+  text-align: left;
+  min-width: 100vw;
+  height: 60px;
+  padding: 10px;
+  background-color: #0097a7;
+  box-shadow: 0 1px 6px 0px #212121;
+}
+
+header h1 {
+  display: inline-block;
+  padding-left: 15px;
+  font-family: "Galada";
+  font-size: 40px;
+  color: white;
+}
+
+header i {
+  color: white;
+  font-size: 40px;
+}
+
+main {
+  /*border: 1px dotted red;*/
+  width: 100vw;
+  position: relative;
+}
+
+section {
+  padding-top: 10%;
+  min-width: 100%;
+}
+
+section .addingContainer {
+  height: 100px;
+  position: fixed;
+  width: 100%;
+  bottom: 0%;
+  background-color: #0097a7;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding: 5vw;
+  z-index: 10;
+  box-shadow: 0 1px 6px 0px #212121;
+}
+
+section .addingContainer * {
+  float: left;
+}
+
+.addButton {
+  background-color: #00838f;
+  min-width: 25vw;
+  min-height: 60px;
+  border-radius: 0px 4px 4px 0px;
+  border: 2px solid #00acc1;
+  border-left: none;
+}
+
+input[type="text"] {
+  width: 65vw;
+  min-height: 60px;
+  border-radius: 4px 0px 0px 4px;
+  border: 2px solid #00acc1;
+  border-right: none;
+  font-size: 150%;
+  padding: 4px;
+  background-color: #ffffff;
+}
+
+button {
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 150%;
+  cursor: pointer;
+}
+
+.clearButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #0097a7;
+}
+
+.clearButton i {
+  font-size: 40px;
+}
+
+@media screen and (min-width: 590px) and (orientation: landscape) {
+  section .addingContainer {
+    height: 25vh;
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
+
+  .App {
+    padding-bottom: 23vh;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-height: 450px) {
+  section .addingContainer {
+    height: 30%;
+  }
+  .App {
+    padding-bottom: 25%;
+  }
+}
+
+@media screen and (min-width: 900px) and (orientation: landscape) {
+  .App {
+    padding-bottom: 20px;
     text-align: center;
     background-color: #b2ebf2;
     min-width: 100vw;
     min-height: 100vh;
-    padding-bottom: 120px;
-}
+  }
 
-header {
-    text-align: left;
-    min-width: 100vw;
-    height: 60px;
-    padding: 10px;
-    background-color: #0097a7;
-    box-shadow: 0 1px 6px 0px #212121;
-}
-
-header h1 {
-    display: inline-block;
-    padding-left: 15px;
-    font-family: 'Galada';
-    font-size: 40px;
-    color: white;
-}
-
-header i {
-    color: white;
-    font-size: 40px;
-}
-
-main {
-    /*border: 1px dotted red;*/
-    width: 100vw;
-    position: relative;
-}
-
-
-section {
-    padding-top: 10%;
+  section {
+    padding-top: initial;
     min-width: 100%;
-}
+    height: 30vh;
+    position: relative;
+  }
 
-section .addingContainer {
-    height: 100px;
-    position: fixed;
+  section .addingContainer {
+    top: 30%;
+    left: 50%;
+    transform: translateX(-20%);
+    position: absolute;
     width: 100%;
-    bottom: 0%;
-    background-color: #0097a7;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding: 5vw;
-    z-index: 10;
-    box-shadow: 0 1px 6px 0px #212121;
-}
+    background-color: #b2ebf2;
+    padding-top: initial;
+    padding-bottom: initial;
+    padding: initial;
+    z-index: initial;
+    box-shadow: initial;
+  }
 
-section .addingContainer * {
+  section .addingContainer * {
     float: left;
-}
+  }
 
-.addButton {
-    background-color: #00838f; 
-    min-width: 25vw;
-    min-height: 60px;
-    border-radius: 0px 4px 4px 0px;
-    border: 2px solid #00acc1;
-    border-left: none;
-}
-
-input[type=text] {
-    width: 65vw;
+  input[type="text"] {
+    min-width: 20vw;
+    max-width: 30vw;
     min-height: 60px;
     border-radius: 4px 0px 0px 4px;
     border: 2px solid #00acc1;
@@ -79,138 +165,44 @@ input[type=text] {
     font-size: 150%;
     padding: 4px;
     background-color: #ffffff;
-}
+  }
 
-button {
+  button {
     border: none;
     color: white;
     text-align: center;
     text-decoration: none;
     font-size: 150%;
     cursor: pointer;
-}
+  }
 
-.clearButton {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #0097a7;
-}
+  .addButton {
+    background-color: #00838f;
+    min-height: 60px;
+    min-width: 120px;
+    border-radius: 0px 4px 4px 0px;
+    border: 2px solid #00acc1;
+    border-left: none;
+  }
 
-.clearButton i {
+  .clearButton {
+    background-color: #ffa000;
+    position: fixed;
+    top: initial;
+    right: initial;
+    bottom: 30px;
+    left: 30px;
+    width: 75px;
+    height: 75px;
+    border-radius: 40px;
+    box-shadow: 0 2px 4px 0px #212121;
+  }
+
+  .clearButton i {
     font-size: 40px;
+  }
+  main {
+    width: 100vw;
+    position: relative;
+  }
 }
-
-@media screen 
-    and (min-width: 590px)
-    and (orientation: landscape) {
-        section .addingContainer {
-            height: 25vh;
-            padding-left: 4vw;
-            padding-right: 4vw;
-        }
-
-        .App {
-            padding-bottom: 23vh;
-        }
-    }
-
-    @media screen 
-    and (orientation: landscape)
-    and (max-height: 450px) {
-        section .addingContainer {
-            height: 30%;
-        }
-        .App {
-            padding-bottom: 25%;
-        }
-    }
-
-    @media screen 
-    and (min-width: 900px)
-    and (orientation: landscape) {
-
-        .App {
-            padding-bottom: 20px;
-            text-align: center;
-            background-color: #b2ebf2;
-            min-width: 100vw;
-            min-height: 100vh;
-        }
-
-        section {
-            padding-top: initial;
-            min-width: 100%;
-            height: 30vh;
-            position: relative;
-        }
-        
-        section .addingContainer {
-            top: 30%;
-            left: 50%;
-            transform: translateX(-20%);
-            position: absolute;
-            width: 100%;
-            background-color: #b2ebf2;
-            padding-top: initial;
-            padding-bottom: initial;
-            padding: initial;
-            z-index: initial;
-            box-shadow: initial;
-        }
-
-        section .addingContainer * {
-            float: left;
-        }
-        
-        input[type=text] {
-            min-width: 20vw;
-            max-width: 30vw;
-            min-height: 60px;
-            border-radius: 4px 0px 0px 4px;
-            border: 2px solid #00acc1;
-            border-right: none;
-            font-size: 150%;
-            padding: 4px;
-            background-color: #ffffff;
-        }
-        
-        button {
-            border: none;
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            font-size: 150%;
-            cursor: pointer;
-        }
-        
-        .addButton {
-            background-color: #00838f; 
-            min-height: 60px;
-            min-width: 120px;
-            border-radius: 0px 4px 4px 0px;
-            border: 2px solid #00acc1;
-            border-left: none;
-        }
-        
-        .clearButton {
-            background-color: #ffa000; 
-            position: fixed;
-            top: initial;
-            right: initial;
-            bottom: 30px;
-            left: 30px;
-            width: 75px;
-            height: 75px;
-            border-radius: 40px;
-            box-shadow: 0 2px 4px 0px #212121;
-        }
-
-        .clearButton i {
-            font-size: 40px;
-        }
-        main {
-        width: 100vw;
-        position: relative;
-        }
-    }

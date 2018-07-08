@@ -1,91 +1,75 @@
-
 .itemList {
-    list-style-type: none;
-    min-width: 100vw;
-}
-
-.containerOfAll * {
-    float: left;
+  list-style-type: none;
+  min-width: 100vw;
 }
 
 .itemList li {
-    font-size: 30px;
-    color: #004d40;
-    width: 90vw;
-    padding: 5px;
-    margin: auto;
-    position: relative;
-}
-
-.taskNumber {
-    background-color: #0097a7;
-    width: 100%;
-}
-
-.taskNumber i {
-    font-size: 20px;
-}
-
-.timeContainer {
-    width: 100%;
-    margin: auto;
-}
-
-.titleContainer {
-    width: 100%;
-    margin: auto;
-}
-
-.iconContainer {
-    position: absolute;
-    right: 20px;
-    cursor: pointer;
-    top: 50%;
-    transform: translateY(-50%)
-}
-
-.taskDetails.hidden {
-    background-color: #e0f7fa;
-    width: 100%;
-    overflow: auto;
-    display: none;
-}
-
-.taskDetails.showed {
-    background-color: #e0f7fa;
-    height: 100px;
-    width: 100%;
-    overflow: auto;
-}
-
-.fas.fa-check-square {
-    font-size: 30px;
-    color: white;
-}
-
-.showDetails {
-    position: absolute;
-    left: 20px;
-    cursor: pointer;
-    top: 50%;
-    transform: translateY(-50%)
-}
-
-.fas.fa-caret-down {
-    font-size: 30px;
-    color: white;
+  font-size: 30px;
+  color: #004d40;
+  width: 90vw;
+  padding: 5px;
+  margin: auto;
+  position: relative;
 }
 
 .headerContainer {
-    position: relative;
-    width: 100%;
+  position: relative;
+  background-color: #0097a7;
+  width: 100%;
 }
 
-@media screen 
-and (min-width: 900px)
-and (orientation: landscape) {
+.timeContainer {
+  width: 100%;
+  margin: auto;
+}
 
-.itemList li {
+.titleContainer {
+  width: 100%;
+  margin: auto;
+}
+
+.iconContainer {
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.taskDetails.hidden {
+  background-color: #e0f7fa;
+  width: 100%;
+  overflow: auto;
+  display: none;
+}
+
+.taskDetails.showed {
+  background-color: #e0f7fa;
+  height: 100px;
+  width: 100%;
+  overflow: auto;
+}
+
+.fas.fa-check-square {
+  font-size: 30px;
+  color: white;
+}
+
+.showDetails {
+  position: absolute;
+  left: 20px;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.fas.fa-caret-down {
+  font-size: 30px;
+  color: white;
+}
+
+@media screen and (min-width: 900px) and (orientation: landscape) {
+  .itemList li {
     width: 70vw;
-}
+  }
 }
