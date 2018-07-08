@@ -36,23 +36,29 @@ main {
   /*border: 1px dotted red;*/
   width: 100vw;
   position: relative;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
+  margin-top: 20px;
+
 }
 
 section {
-  min-width: 100%;
+  width: 100%;
   position: fixed;
   bottom: 0%;
   z-index: 1;
+  background-color: #0097a7;
+  box-shadow: 0 1px 6px 0px #212121;
+  min-height: calc(60px + 10vw);
 }
 
 section .addingContainer {
-  min-height: calc(60px + 10vw);
   width: 100%;
-  background-color: #0097a7;
-  padding: 5vw;
   z-index: 10;
-  box-shadow: 0 1px 6px 0px #212121;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(65vw + 8px + 25vw);
 }
 
 section .addingContainer * {
@@ -100,9 +106,6 @@ button {
 }
 
 @media screen and (orientation: landscape) and (max-height: 450px) {
-  section .addingContainer {
-    height: 30%;
-  }
   .App {
     padding-bottom: 25%;
   }
@@ -119,16 +122,13 @@ button {
 
   section {
     height: 300px;
-    padding-top: initial;
-    width: 100%;
     position: relative;
+    background-color: transparent;
+    box-shadow: none;
   }
 
   section .addingContainer {
-    background-color: transparent;
-    box-shadow: none;
     min-height: 60px;
-    width: initial;
     padding: 0;
     position: absolute;
     top: 50%;
@@ -183,7 +183,6 @@ button {
     font-size: 40px;
   }
   main {
-    width: 100vw;
-    position: relative;
+    margin-top: initial;
   }
 }
